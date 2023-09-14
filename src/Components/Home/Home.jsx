@@ -22,12 +22,19 @@ const Home = () => {
 
         const isExist = boardCourse.find(existItem => existItem.id == singleCard.id);
 
+        let creditHour = singleCard.credit;
+
+
         if (isExist) {
             return alert('vai ami asi');
         } else {
             
-            if(remaining < 0 && boardCredit > 20){
-                return alert('mamu ami khelmu na');
+            boardCourse.forEach(item => {
+                creditHour += item.credit;
+            })
+
+            if(creditHour > 20){
+                alert('mamu pore aiso');
             }else{
                 const newRemaining = remaining - singleCard.credit;
                 setRemaining(newRemaining);

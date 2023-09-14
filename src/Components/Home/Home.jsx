@@ -22,20 +22,7 @@ const Home = () => {
 
         const isExist = boardCourse.find(existItem => existItem.id == singleCard.id);
 
-        let creditHour = singleCard.credit;
-
-
-        if (isExist) {
-            return alert('vai ami asi');
-        } else {
-            
-            boardCourse.forEach(item => {
-                creditHour += item.credit;
-            })
-
-            if(creditHour > 20){
-                alert('mamu pore aiso');
-            }else{
+            if(!isExist){
                 const newRemaining = remaining - singleCard.credit;
                 setRemaining(newRemaining);
     
@@ -47,9 +34,15 @@ const Home = () => {
     
                 const newTotalPrice = boardPrice + singleCard.price;
                 setBoardPrice(newTotalPrice);
+            }else{
+                alert('already exist in your list');
             }
 
-        }
+            
+            if(remaining < singleCard.credit){
+                return alert('insuficient credit');
+            }
+     
     }
 
 

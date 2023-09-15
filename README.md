@@ -9,6 +9,7 @@
 
 
 - Discuss how you managed the state in your assignment project.
+    
     I used React JS as a front-end framework in the course registration application, 
     Where the state has been used 5 times.
 

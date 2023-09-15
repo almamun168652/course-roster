@@ -28,14 +28,14 @@ const Home = () => {
             return Swal.fire({
                 icon: 'error',
                 title: 'Sorry...',
-                text: "This Course Already Exists!"
+                text: "This Course Already Enrolled..!"
               });
         } else {
             if (remaining < singleCard.credit) {
                 return Swal.fire({
                     icon: 'warning',
                     title: 'Sorry...',
-                    text: "You don't have enough credit.!"
+                    text: "You don't have enough credit..!"
                   });
             } else {
                 const newRemaining = remaining - singleCard.credit;
@@ -59,7 +59,7 @@ const Home = () => {
         <div>
             <Header></Header>
             <main className="max-w-screen-xl mx-auto px-4">
-                <section className="flex justify-between gap-6 flex-col md:flex-row">
+                <section className="flex justify-between gap-6 flex-col lg:flex-row">
                     <Cards selectToBoard={selectToBoard} allCards={allCards}></Cards>
                     <Boards boardPrice={boardPrice} boardCredit={boardCredit} boardCourse={boardCourse} remaining={remaining}></Boards>
                 </section>

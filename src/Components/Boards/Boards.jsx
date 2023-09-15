@@ -6,7 +6,7 @@ const Boards = ({remaining , boardCourse , boardCredit , boardPrice}) => {
 
 
     return (
-        <div className="w-full md:w-1/4 ">
+        <div className="w-full lg:w-1/4 mb-4">
             <Board boardPrice={boardPrice} boardCredit={boardCredit} boardCourse={boardCourse} remaining={remaining}></Board>
         </div>
     );

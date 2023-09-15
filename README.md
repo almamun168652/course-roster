@@ -2,7 +2,7 @@
 
 
 - Add at least 3 Project features
-    1. Each student will have 20 hours of credit time, meaning everyone can spend 20 hours to learn multiple courses.
+    1. Every student will have 20 hours of credit time, meaning everyone can spend 20 hours to learn multiple courses.
     2. Every student can learn multiple courses at the same time if his or her credit time is left.
     3. The price of every course is given on the card, and you can also see it at the total price. If you enroll multiple courses, you can see the total price of the courses in the total price field.
 

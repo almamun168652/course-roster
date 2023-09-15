@@ -9,7 +9,7 @@
 
 
 - Discuss how you managed the state in your assignment project.
-    
+
     I used React JS as a front-end framework in the course registration application, 
     Where the state has been used 5 times.
 
@@ -24,7 +24,6 @@
     And if you enroll a new course, it is added to the previous course and stored in the board's course.
     and the serial number and name of the course.
     Displaying dynamically in display.
-
     If a course has already been enrolled, it will no longer be enrolled, conditions checked, a sweet alert displayed and a warning has been given.
 
     4. The cards show how many hours it will take to learn each course, 

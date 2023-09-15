@@ -1,7 +1,9 @@
+import Swal from "sweetalert2";
 import Boards from "../Boards/Boards";
 import Cards from "../Cards/Cards";
 import Header from "../Header/Header";
 import { useEffect, useState } from "react";
+
 
 const Home = () => {
 
@@ -22,33 +24,19 @@ const Home = () => {
 
         const isExist = boardCourse.find(existItem => existItem.id == singleCard.id);
 
-
-        // if (remaining < singleCard.credit) {
-        //     return alert('insuficient credit');
-        // }
-
-
-        // if (!isExist) {
-        //     const newRemaining = remaining - singleCard.credit;
-        //     setRemaining(newRemaining);
-
-        //     const newBoardCourse = [...boardCourse, singleCard];
-        //     setBoardCourse(newBoardCourse);
-
-        //     const newBoardCredit = boardCredit + singleCard.credit;
-        //     setBoardCredit(newBoardCredit);
-
-        //     const newTotalPrice = boardPrice + singleCard.price;
-        //     setBoardPrice(newTotalPrice);
-        // } else {
-        //     alert('already exist in your list');
-        // }
-
         if (isExist) {
-            return alert('already exist in your list');
+            return Swal.fire({
+                icon: 'error',
+                title: 'Sorry...',
+                text: "This Course Already Exists!"
+              });
         } else {
             if (remaining < singleCard.credit) {
-                return alert('insuficient credit');
+                return Swal.fire({
+                    icon: 'warning',
+                    title: 'Sorry...',
+                    text: "You don't have enough credit.!"
+                  });
             } else {
                 const newRemaining = remaining - singleCard.credit;
                 setRemaining(newRemaining);

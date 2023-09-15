@@ -22,27 +22,48 @@ const Home = () => {
 
         const isExist = boardCourse.find(existItem => existItem.id == singleCard.id);
 
-            if(!isExist){
+
+        // if (remaining < singleCard.credit) {
+        //     return alert('insuficient credit');
+        // }
+
+
+        // if (!isExist) {
+        //     const newRemaining = remaining - singleCard.credit;
+        //     setRemaining(newRemaining);
+
+        //     const newBoardCourse = [...boardCourse, singleCard];
+        //     setBoardCourse(newBoardCourse);
+
+        //     const newBoardCredit = boardCredit + singleCard.credit;
+        //     setBoardCredit(newBoardCredit);
+
+        //     const newTotalPrice = boardPrice + singleCard.price;
+        //     setBoardPrice(newTotalPrice);
+        // } else {
+        //     alert('already exist in your list');
+        // }
+
+        if (isExist) {
+            return alert('already exist in your list');
+        } else {
+            if (remaining < singleCard.credit) {
+                return alert('insuficient credit');
+            } else {
                 const newRemaining = remaining - singleCard.credit;
                 setRemaining(newRemaining);
-    
+
                 const newBoardCourse = [...boardCourse, singleCard];
                 setBoardCourse(newBoardCourse);
-    
+
                 const newBoardCredit = boardCredit + singleCard.credit;
                 setBoardCredit(newBoardCredit);
-    
+
                 const newTotalPrice = boardPrice + singleCard.price;
                 setBoardPrice(newTotalPrice);
-            }else{
-                alert('already exist in your list');
             }
+        }
 
-            
-            if(remaining < singleCard.credit){
-                return alert('insuficient credit');
-            }
-     
     }
 
 
